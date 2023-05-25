@@ -21,7 +21,7 @@ const listOfSquareIds = ['sqA', 'sqB', 'sqC', 'sqD'];
 
 export default function Squares() {
 
-  const [squares, setSquares] = useState([])
+  const [squares, setSquares] = useState(listOfSquareIds)
   const [activeSquare, setActiveSquare] = useState(null)
   // Use the state hook twice, as we need two slices of state: 'squares' and
   // 'activeSquare'. One holds the _array_ of square ids, and the other keeps track

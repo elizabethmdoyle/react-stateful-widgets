@@ -62,9 +62,9 @@ export default function Moods() {
       <h2>Moods</h2>
       <div id='mood' style={style}>{mood}</div> {/* STEP 3 */}
       <div>
-        <button id='makeHappy' onClick={() => setMood(makeHappy)}>Make Happy</button>
-        <button id='makeSad' onClick={() => setMood(makeSad)}>Make Sad</button>
-        <button id='resetMood' onClick={() => setMood(reset)}>Reset</button>
+        <button id='makeHappy' onClick={makeHappy}>Make Happy</button>
+        <button id='makeSad' onClick={makeSad}>Make Sad</button>
+        <button id='resetMood' onClick={reset}>Reset</button>
       </div>
     </div>
   );
