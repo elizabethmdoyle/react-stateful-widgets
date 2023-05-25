@@ -54,17 +54,17 @@ export default function Moods() {
     fontSize: '1.5em',
     marginBottom: '0.3em',
     color:  /* STEP 2 */
-    happyMood ? 'royalblue' : 'crimson'
+    (mood === happyMood) ? 'royalblue' : 'crimson'
   };
 
   return (
     <div className='widget-moods container'>
       <h2>Moods</h2>
-      <div id='mood' style={style}>Not sure how I feel</div> {/* STEP 3 */}
+      <div id='mood' style={style}>{mood}</div> {/* STEP 3 */}
       <div>
-        <button id='makeHappy' onClick={makeHappy}>Make Happy</button>
-        <button id='makeSad' onClick={makeSad}>Make Sad</button>
-        <button id='resetMood' onClick={reset}>Reset</button>
+        <button id='makeHappy' onClick={() => setMood(makeHappy)}>Make Happy</button>
+        <button id='makeSad' onClick={() => setMood(makeSad)}>Make Sad</button>
+        <button id='resetMood' onClick={() => setMood(reset)}>Reset</button>
       </div>
     </div>
   );
